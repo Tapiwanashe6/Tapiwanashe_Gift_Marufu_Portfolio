@@ -859,16 +859,7 @@
   }
   .portrait-modal-close:hover { background: rgba(255,255,255,0.2); }
 
-  /* rotating text ring */
-  .stamp-ring-text {
-    font-family: var(--mono);
-    transform-box: view-box;
-    transform-origin: 50% 50%;
-    animation: stamp-spin 22s linear infinite;
-  }
-  @keyframes stamp-spin {
-    to { transform: rotate(360deg); }
-  }
+  .hero-stamp { cursor: pointer; }
 </style>
 </head>
 <body data-theme="light">
@@ -906,13 +897,11 @@
           <clipPath id="stampClip">
             <circle cx="60" cy="60" r="37"/>
           </clipPath>
-          <path id="textRing" d="M 60,11 a 49,49 0 1,1 0,0.001"/>
         </defs>
         <image href="assets/portrait.png" x="23" y="23" width="74" height="74" clip-path="url(#stampClip)" preserveAspectRatio="xMidYMid slice"/>
-        <circle cx="60" cy="60" r="37" fill="none" stroke="currentColor" stroke-width="0.75" opacity="0.25"/>
-        <text class="stamp-ring-text" font-size="7.2" fill="currentColor" opacity="0.5" letter-spacing="2.4">
-          <textPath href="#textRing">TAPIWANASHE · UI/UX DESIGNER · KIGALI · 2026 ·</textPath>
-        </text>
+        <circle cx="60" cy="60" r="37" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.2"/>
+        <polyline fill="none" stroke="currentColor" stroke-width="1" opacity="0.4" stroke-linecap="round" stroke-linejoin="round"
+          points="100.0,60.0 99.0,70.5 95.3,80.4 89.1,89.1 80.8,96.0 70.9,100.5 60.0,102.3 48.9,101.3 38.4,97.3 29.3,90.8 22.0,81.9 17.2,71.5 15.3,60.0 16.5,48.3 20.7,37.3 27.6,27.6 36.9,20.0 47.9,15.0 60.0,13.0 72.3,14.2 83.9,18.6 94.1,25.9 102.1,35.7 107.3,47.3 109.3,60.0 108.0,72.9 103.4,85.1 95.7,95.7 85.4,104.1 73.3,109.5 60.0,111.7 46.5,110.3 33.8,105.4 22.7,97.4 13.9,86.6 8.2,73.9 6.0,60.0"/>
       </svg>
     </div>
 
