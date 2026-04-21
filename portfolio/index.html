@@ -226,6 +226,15 @@
     object-position: center top;
   }
   @media (max-width: 900px) { .hero-portrait { display: none; } }
+  .hero-edition-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .hero-stamp {
+    flex-shrink: 0;
+  }
   .hero-desc {
     font-size: 18px;
     line-height: 1.5;
@@ -835,7 +844,20 @@
 <section id="top" class="hero">
   <div class="hero-left">
     <div class="hero-meta reveal">
-      <div class="hero-meta-item">Portfolio / 2026<span>Edition №04</span></div>
+      <div class="hero-meta-item">
+        <div class="hero-edition-row">
+          <div>Portfolio / 2026<span>Edition №04</span></div>
+          <svg class="hero-stamp" viewBox="0 0 90 90" width="68" height="68" aria-hidden="true">
+            <defs>
+              <clipPath id="stampClip">
+                <circle cx="45" cy="45" r="28"/>
+              </clipPath>
+            </defs>
+            <polygon points="45,1 54,11 67,7 70,20 83,23 79,36 89,45 79,54 83,67 70,70 67,83 54,79 45,89 36,79 23,83 20,70 7,67 11,54 1,45 11,36 7,23 20,20 23,7 36,11" fill="var(--ink)"/>
+            <image href="assets/portrait.png" x="17" y="17" width="56" height="56" clip-path="url(#stampClip)" preserveAspectRatio="xMidYMin slice"/>
+          </svg>
+        </div>
+      </div>
       <div class="hero-meta-item">UI / UX Designer<span>Product · Mobile · Web</span></div>
       <div class="hero-meta-item">Based in Kigali<span>Available worldwide, remote</span></div>
     </div>
@@ -1373,20 +1395,23 @@
     el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
   });
 
-  // Work peek (hover preview)
+  // Work peek (hover preview — desktop only)
   const peek = document.getElementById('workPeek');
-  document.querySelectorAll('.work-item').forEach(item => {
-    item.addEventListener('mouseenter', () => {
-      const src = item.dataset.peek;
-      if (src) peek.innerHTML = `<img src="${src}" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='#d8d5cc';this.remove();">`;
-      peek.classList.add('show');
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll('.work-item').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        const src = item.dataset.peek;
+        if (src) peek.innerHTML = `<img src="${src}" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='#d8d5cc';this.remove();">`;
+        peek.classList.add('show');
+      });
+      item.addEventListener('mouseleave', () => peek.classList.remove('show'));
+      item.addEventListener('mousemove', (e) => {
+        peek.style.left = e.clientX + 'px';
+        peek.style.top = e.clientY + 'px';
+      });
     });
-    item.addEventListener('mouseleave', () => peek.classList.remove('show'));
-    item.addEventListener('mousemove', (e) => {
-      peek.style.left = e.clientX + 'px';
-      peek.style.top = e.clientY + 'px';
-    });
-  });
+    window.addEventListener('scroll', () => peek.classList.remove('show'), { passive: true });
+  }
 
   // ===== TWEAKS PANEL =====
   const tweaks = document.getElementById('tweaks');
