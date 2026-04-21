@@ -226,17 +226,16 @@
     object-position: center top;
   }
   @media (max-width: 900px) { .hero-portrait { display: none; } }
-  .hero-edition-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
   .hero-stamp {
-    flex-shrink: 0;
     display: none;
   }
   @media (max-width: 900px) {
-    .hero-stamp { display: block; }
+    .hero-stamp {
+      display: block;
+      grid-column: 2;
+      grid-row: 1 / 4;
+      align-self: center;
+    }
   }
   .hero-desc {
     font-size: 18px;
@@ -803,7 +802,8 @@
 
   @media (max-width: 900px) {
     .nav-links { display: none; }
-    .hero-meta { grid-template-columns: 1fr; gap: 12px; margin-bottom: 28px; }
+    .hero-meta { grid-template-columns: 1fr auto; gap: 2px 20px; margin-bottom: 28px; align-items: start; }
+    .hero-meta-item span { margin-top: 0; }
     .hero-sub { grid-template-columns: 1fr; margin-top: 28px; padding-top: 20px; }
     .work-item { grid-template-columns: 40px 1fr; gap: 16px; }
     .work-meta, .work-desc { display: none; }
@@ -847,22 +847,18 @@
 <section id="top" class="hero">
   <div class="hero-left">
     <div class="hero-meta reveal">
-      <div class="hero-meta-item">
-        <div class="hero-edition-row">
-          <div>Portfolio / 2026<span>Edition №04</span></div>
-          <svg class="hero-stamp" viewBox="0 0 90 90" width="68" height="68" aria-hidden="true">
-            <defs>
-              <clipPath id="stampClip">
-                <circle cx="45" cy="45" r="28"/>
-              </clipPath>
-            </defs>
-            <polygon points="45,1 54,11 67,7 70,20 83,23 79,36 89,45 79,54 83,67 70,70 67,83 54,79 45,89 36,79 23,83 20,70 7,67 11,54 1,45 11,36 7,23 20,20 23,7 36,11" fill="var(--ink)"/>
-            <image href="assets/portrait.png" x="17" y="17" width="56" height="56" clip-path="url(#stampClip)" preserveAspectRatio="xMidYMid slice"/>
-          </svg>
-        </div>
-      </div>
+      <div class="hero-meta-item">Portfolio / 2026<span>Edition №04</span></div>
       <div class="hero-meta-item">UI / UX Designer<span>Product · Mobile · Web</span></div>
       <div class="hero-meta-item">Based in Kigali<span>Available worldwide, remote</span></div>
+      <svg class="hero-stamp" viewBox="0 0 90 90" width="72" height="72" aria-hidden="true">
+        <defs>
+          <clipPath id="stampClip">
+            <circle cx="45" cy="45" r="28"/>
+          </clipPath>
+        </defs>
+        <polygon points="45,1 54,11 67,7 70,20 83,23 79,36 89,45 79,54 83,67 70,70 67,83 54,79 45,89 36,79 23,83 20,70 7,67 11,54 1,45 11,36 7,23 20,20 23,7 36,11" fill="var(--ink)"/>
+        <image href="assets/portrait.png" x="17" y="17" width="56" height="56" clip-path="url(#stampClip)" preserveAspectRatio="xMidYMid slice"/>
+      </svg>
     </div>
 
     <h1 class="hero-title reveal">
