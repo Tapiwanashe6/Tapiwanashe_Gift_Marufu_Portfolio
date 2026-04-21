@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relay — Tapiwanashe Marufu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_case.css">
+</head>
+<body data-theme="light">
+<nav class="nav" id="nav">
+  <a href="../index.html" class="nav-logo">Tapiwanashe Marufu</a>
+  <a href="../index.html#work" class="nav-back">← Back to index</a>
+</nav>
+
+<header class="case-head">
+  <div class="case-meta">
+    <span>Case 06 / 06</span>
+    <span style="color:var(--ink);text-transform:none;letter-spacing:0;font-family:var(--sans);font-size:14px;">Team ops · Web</span>
+    <span>2026</span>
+  </div>
+  <h1 class="case-title">Relay — the <em>handoff</em>, without the meeting.</h1>
+  <div class="case-sub">
+    <p class="case-desc">A lightweight handoff tool for distributed creative teams. Async video notes replace the morning standup, threaded updates replace the Slack scroll, and everything lives next to the work — not in another tab.</p>
+    <div class="case-facts">
+      <div class="case-fact"><h5>Role</h5><p>Designer · Concept</p></div>
+      <div class="case-fact"><h5>Team</h5><p>Solo, with 3 user interviews</p></div>
+      <div class="case-fact"><h5>Duration</h5><p>5 weeks</p></div>
+      <div class="case-fact"><h5>Deliverables</h5><p>Web app · Figma plugin concept</p></div>
+    </div>
+  </div>
+</header>
+
+<div class="case-hero-img">
+  <div class="frame" style="padding:32px;">
+    <div style="background:var(--bg);border:1px solid var(--line);border-radius:8px;height:100%;display:grid;grid-template-columns:220px 1fr 280px;overflow:hidden;">
+      <aside style="border-right:1px solid var(--line);padding:20px;font-size:12px;">
+        <div style="font-family:var(--mono);font-size:10px;text-transform:uppercase;color:var(--ink-mute);margin-bottom:14px;">Team · Studio Kora</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div>● Pulse · redesign</div>
+          <div style="color:var(--ink-mute);">○ Meridian · web v2</div>
+          <div style="color:var(--ink-mute);">○ Lumen · S4 content</div>
+          <div style="color:var(--ink-mute);">○ Canopy · donor CRM</div>
+        </div>
+      </aside>
+      <section style="padding:28px;">
+        <div style="font-family:var(--mono);font-size:10px;text-transform:uppercase;color:var(--ink-mute);">Today's handoff</div>
+        <div style="font-family:var(--serif);font-size:36px;letter-spacing:-0.02em;margin:8px 0 20px;">Pulse · <em>review sprint 12</em></div>
+        <div style="background:var(--bg-alt);border:1px solid var(--line);border-radius:10px;aspect-ratio:16/9;margin-bottom:16px;display:grid;place-items:center;color:var(--ink-mute);font-family:var(--mono);font-size:11px;">▶  2:14 · Iris walking through the new onboarding</div>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:12px;">
+          <div style="padding:10px 14px;background:var(--bg-alt);border-radius:6px;"><strong>Thierry</strong> · Looks great, one q about step 3.</div>
+          <div style="padding:10px 14px;background:var(--bg-alt);border-radius:6px;"><strong>Maya</strong> · I'll pick up the copy, ship by Fri.</div>
+        </div>
+      </section>
+      <aside style="border-left:1px solid var(--line);padding:20px;font-size:12px;">
+        <div style="font-family:var(--mono);font-size:10px;text-transform:uppercase;color:var(--ink-mute);margin-bottom:14px;">On deck</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="padding:12px;background:var(--bg-alt);border-radius:8px;"><strong>Daniel</strong><div style="color:var(--ink-mute);">Shipped auth v2 · 3 min ago</div></div>
+          <div style="padding:12px;background:var(--bg-alt);border-radius:8px;"><strong>Rose</strong><div style="color:var(--ink-mute);">Posting handoff at 5pm</div></div>
+          <div style="padding:12px;background:var(--bg-alt);border-radius:8px;"><strong>Maya</strong><div style="color:var(--ink-mute);">OOO until Monday</div></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<main class="case-content">
+  <section class="case-section">
+    <h2>( 01 ) Context</h2>
+    <div class="body">
+      <p class="lead">We all hate standups. We're all still doing them. <em>Why?</em></p>
+      <p>I interviewed three distributed teams (8, 14 and 21 people). All three complained about meeting fatigue. All three still held a daily standup. The real blocker wasn't meetings; it was a lack of a <em>place</em> for async updates to live, close enough to the work that people would actually read them.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>( 02 ) The bet</h2>
+    <div class="body">
+      <p>Relay's bet is that a three-minute video note, posted once a day, against a specific project, replaces 90% of the standup. The remaining 10% is worth a real call.</p>
+      <div class="callout">
+        <div><div class="callout-num">&lt; 3m</div><div class="callout-label">Max video length, enforced</div></div>
+        <div><div class="callout-num">1</div><div class="callout-label">Handoff per project per day</div></div>
+        <div><div class="callout-num">0</div><div class="callout-label">Notifications outside work hours</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>( 03 ) Key surfaces</h2>
+    <div class="body">
+      <div class="screens">
+        <div class="screen-frame s-half"><div style="font-family:var(--mono);font-size:12px;color:var(--ink-mute);">[ Recorder — 3-minute countdown, no re-record, ship the first take ]</div><span class="caption">Recorder</span></div>
+        <div class="screen-frame s-half"><div style="font-family:var(--mono);font-size:12px;color:var(--ink-mute);">[ Project wall — chronological video+text feed, one project at a time ]</div><span class="caption">Project wall</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>( 04 ) Status</h2>
+    <div class="body">
+      <p>Relay is a concept — not shipped. The case study is a thinking artefact: if you work on async tools, or run a team that might be a fit for the prototype, please reach out.</p>
+      <div class="callout">
+        <div><div class="callout-num">3</div><div class="callout-label">Teams interviewed</div></div>
+        <div><div class="callout-num">42</div><div class="callout-label">Frames in the clickable prototype</div></div>
+        <div><div class="callout-num">Q3</div><div class="callout-label">Target for first private beta</div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<blockquote class="case-quote"><p>“We killed our 9am standup <em>two weeks</em> into the Relay pilot.”</p><footer>— Interview participant, Head of Design</footer></blockquote>
+
+<section class="case-next">
+  <p class="label">( End of reel · back to the top )</p>
+  <a href="pulse.html" class="next-link">Back to <em>case 01</em> →</a>
+  <p class="next-desc">Or return to the index <span class="dot"></span> <a href="../index.html" style="text-decoration:underline;">Home</a></p>
+</section>
+
+<footer class="site-foot"><span>© 2026 Tapiwanashe Marufu</span><a href="../index.html">Back to index →</a></footer>
+<script src="_shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse — Tapiwanashe Marufu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_case.css">
+</head>
+<body data-theme="light">
+
+<nav class="nav" id="nav">
+  <a href="../index.html" class="nav-logo">Tapiwanashe Marufu</a>
+  <a href="../index.html#work" class="nav-back">← Back to index</a>
+</nav>
+
+<header class="case-head">
+  <div class="case-meta">
+    <span>Case 01 / 06</span>
+    <span style="color:var(--ink);text-transform:none;letter-spacing:0;font-family:var(--sans);font-size:14px;">Health tracking · iOS &amp; Android</span>
+    <span>2025</span>
+  </div>
+  <h1 class="case-title">Pulse — a <em>quieter</em> way to track your health.</h1>
+  <div class="case-sub">
+    <p class="case-desc">A daily rhythm tracker for patients managing chronic illness. Pulse replaces numbers-first dashboards with gentle habit loops, photos of your day, and weekly summaries that your clinician can actually read.</p>
+    <div class="case-facts">
+      <div class="case-fact"><h5>Role</h5><p>Lead designer</p></div>
+      <div class="case-fact"><h5>Team</h5><p>2 engineers, 1 PM</p></div>
+      <div class="case-fact"><h5>Duration</h5><p>10 weeks</p></div>
+      <div class="case-fact"><h5>Deliverables</h5><p>iOS · Android · Design system</p></div>
+    </div>
+  </div>
+</header>
+
+<div class="case-hero-img">
+  <div class="frame" style="display:flex;align-items:center;justify-content:center;gap:24px;padding:40px;">
+    <div class="phone">
+      <div class="status"><span>9:41</span><span>●●●●</span></div>
+      <div class="pill">Today · Mon 12</div>
+      <div class="h">Good morning,<br><em>how are you?</em></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:6px;"><strong style="color:var(--ink);font-size:11px;">Sleep</strong><span>7h 42m</span></div><div class="bar w70" style="height:4px;"></div></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:6px;"><strong style="color:var(--ink);font-size:11px;">Mood</strong><span>Steady</span></div><div class="bar w40" style="height:4px;"></div></div>
+      <div class="card">A short walk before breakfast helped last Tuesday. Try it again?</div>
+      <div class="btn-mini">Check in</div>
+    </div>
+    <div class="phone">
+      <div class="status"><span>9:42</span><span>●●●●</span></div>
+      <div class="pill">Week 24</div>
+      <div class="h">You felt <em>steady</em> four days this week.</div>
+      <div style="display:flex;gap:4px;height:80px;align-items:flex-end;">
+        <div style="flex:1;height:30%;background:var(--line);"></div>
+        <div style="flex:1;height:55%;background:var(--line);"></div>
+        <div style="flex:1;height:70%;background:var(--ink-fade);"></div>
+        <div style="flex:1;height:45%;background:var(--line);"></div>
+        <div style="flex:1;height:85%;background:var(--ink);"></div>
+        <div style="flex:1;height:60%;background:var(--ink-fade);"></div>
+        <div style="flex:1;height:40%;background:var(--line);"></div>
+      </div>
+      <div class="card">Your clinician has left a note. Tap to read.</div>
+      <div class="btn-mini">Share weekly summary</div>
+    </div>
+  </div>
+</div>
+
+<main class="case-content">
+
+  <section class="case-section">
+    <h2>( 01 ) Context</h2>
+    <div class="body">
+      <p class="lead">Existing trackers treat chronic patients like <em>athletes</em>. Pulse treats them like humans.</p>
+      <p>We spoke with 14 people managing long-term conditions — from Type 2 diabetes to rheumatoid arthritis. A pattern emerged quickly: the apps they'd been prescribed felt like homework. Streaks, red warnings, graphs that only made sense to their doctor.</p>
+      <p>Our design brief was deliberately soft: build a daily ritual that the patient wants to return to, and produce a once-a-week artefact the clinician can scan in under 30 seconds.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>( 02 ) Research</h2>
+    <div class="body">
+      <p>14 patient interviews, 4 clinician ride-alongs, and a two-week diary study. Three findings reshaped the product:</p>
+      <div class="callout">
+        <div><div class="callout-num">11 / 14</div><div class="callout-label">Patients found red warnings &amp; streaks demotivating</div></div>
+        <div><div class="callout-num">38s</div><div class="callout-label">Average time a clinician spends reviewing app data per visit</div></div>
+        <div><div class="callout-num">3×</div><div class="callout-label">More adherence when prompts used soft, question-based copy</div></div>
+      </div>
+      <p>The weekly clinician-facing artefact became the north star — if that wasn't useful, nothing else mattered.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>( 03 ) Design</h2>
+    <div class="body">
+      <p class="lead">Three moves did most of the work: soft copy, <em>low-contrast</em> data visuals, and a single weekly share.</p>
+      <div class="screens">
+        <div class="screen-frame s-half tall"><div class="phone" style="width:220px;height:auto;"><div class="status"><span>9:41</span><span>●●●●</span></div><div class="pill">Check-in</div><div class="h">How did you <em>sleep?</em></div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;"><div class="pill" style="color:var(--ink);">Deep</div><div class="pill">Broken</div><div class="pill">Less than usual</div></div><div class="card">Optional: add a photo or note</div><div class="btn-mini">Continue</div></div><span class="caption">Daily check-in · question-led</span></div>
+        <div class="screen-frame s-half tall"><div class="phone" style="width:220px;height:auto;"><div class="status"><span>9:41</span><span>●●●●</span></div><div class="pill">Timeline</div><div class="h">Your <em>last 7 days</em></div><div style="display:flex;flex-direction:column;gap:8px;">
+          <div class="card"><strong style="color:var(--ink);">Mon</strong> · slept well, walked 20 min</div>
+          <div class="card"><strong style="color:var(--ink);">Tue</strong> · fatigue after lunch</div>
+          <div class="card"><strong style="color:var(--ink);">Wed</strong> · steady, joint pain low</div>
+          <div class="card"><strong style="color:var(--ink);">Thu</strong> · slept 5h, mood dipped</div>
+        </div></div><span class="caption">Weekly timeline — narrative first</span></div>
+      </div>
+      <p>Colour was used to separate data from emotion. The app itself reads almost entirely in neutrals; the only tinted element is the clinician export, which uses a restrained traffic-light for at-a-glance reading.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>( 04 ) Outcome</h2>
+    <div class="body">
+      <div class="callout">
+        <div><div class="callout-num">+64%</div><div class="callout-label">14-day retention vs previous tracker</div></div>
+        <div><div class="callout-num">4.8</div><div class="callout-label">App store rating after 3 months</div></div>
+        <div><div class="callout-num">82%</div><div class="callout-label">Clinicians now open the weekly summary</div></div>
+      </div>
+      <p>Pulse shipped in pilot to two clinics in Q1 2026. A second round of research is already reshaping the onboarding — users want fewer questions on day one, not more.</p>
+    </div>
+  </section>
+</main>
+
+<blockquote class="case-quote">
+  <p>“Pulse is the first tracker I haven't <em>deleted</em> by week three.”</p>
+  <footer>— Pilot participant, age 54</footer>
+</blockquote>
+
+<section class="case-next">
+  <p class="label">( Next case · 02 / 06 )</p>
+  <a href="meridian.html" class="next-link">Meridian <em>— neobank</em> →</a>
+  <p class="next-desc">Cross-border banking for East-African freelancers <span class="dot"></span> 2025 · Client work</p>
+</section>
+
+<footer class="site-foot">
+  <span>© 2026 Tapiwanashe Marufu</span>
+  <a href="../index.html">Back to index →</a>
+</footer>
+
+<script src="_shared.js"></script>
+</body>
+</html>

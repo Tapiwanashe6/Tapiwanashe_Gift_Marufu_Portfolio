@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumen — Tapiwanashe Marufu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_case.css">
+</head>
+<body data-theme="light">
+<nav class="nav" id="nav">
+  <a href="../index.html" class="nav-logo">Tapiwanashe Marufu</a>
+  <a href="../index.html#work" class="nav-back">← Back to index</a>
+</nav>
+
+<header class="case-head">
+  <div class="case-meta">
+    <span>Case 03 / 06</span>
+    <span style="color:var(--ink);text-transform:none;letter-spacing:0;font-family:var(--sans);font-size:14px;">Education · Android</span>
+    <span>2024</span>
+  </div>
+  <h1 class="case-title">Lumen — a <em>study companion</em> for low-bandwidth lives.</h1>
+  <div class="case-sub">
+    <p class="case-desc">A spaced-repetition learning app for secondary-school students in rural East Africa. Works on entry-level Android phones over 2G, pairs students with tutors over SMS, and keeps going even when the data does not.</p>
+    <div class="case-facts">
+      <div class="case-fact"><h5>Role</h5><p>UI/UX Designer</p></div>
+      <div class="case-fact"><h5>Team</h5><p>3 engineers, 1 content lead</p></div>
+      <div class="case-fact"><h5>Duration</h5><p>12 weeks</p></div>
+      <div class="case-fact"><h5>Deliverables</h5><p>Android · SMS fallback</p></div>
+    </div>
+  </div>
+</header>
+
+<div class="case-hero-img">
+  <div class="frame" style="display:flex;align-items:center;justify-content:center;gap:24px;padding:40px;">
+    <div class="phone">
+      <div class="status"><span>9:41</span><span>2G ●○○○</span></div>
+      <div class="pill">Today · Biology</div>
+      <div class="h">5 cards to <em>review</em></div>
+      <div class="card" style="background:var(--ink);color:var(--bg);font-size:13px;padding:20px;border-radius:12px;">The mitochondrion is the …</div>
+      <div style="display:flex;gap:6px;">
+        <div class="pill">Again</div><div class="pill">Hard</div><div class="pill" style="color:var(--ink);">Good</div><div class="pill">Easy</div>
+      </div>
+      <div class="card" style="font-size:10px;">Offline mode · syncs when you're online.</div>
+      <div class="btn-mini">Show answer</div>
+    </div>
+    <div class="phone">
+      <div class="status"><span>9:41</span><span>2G ●○○○</span></div>
+      <div class="pill">Tutor · Mme Rose</div>
+      <div class="h"><em>Messages</em></div>
+      <div class="card" style="font-size:11px;">Good morning! Did you finish the chemistry set?</div>
+      <div class="card" style="font-size:11px;background:var(--ink);color:var(--bg);align-self:flex-end;max-width:80%;">Yes — I'm stuck on #4 though.</div>
+      <div class="card" style="font-size:11px;">Let's do it together at 6pm. I'll call.</div>
+      <div class="card" style="font-size:10px;">Works over SMS when data is off.</div>
+      <div class="btn-mini">Reply</div>
+    </div>
+  </div>
+</div>
+
+<main class="case-content">
+  <section class="case-section">
+    <h2>( 01 ) Context</h2>
+    <div class="body">
+      <p class="lead">Most study apps assume <em>broadband and a laptop</em>. Most students have neither.</p>
+      <p>Lumen was commissioned by a Rwandan ed-tech non-profit reaching students in secondary schools across the Northern Province. Median device: a 2019 Tecno with 2GB of RAM. Median connection: intermittent 2G. Median screen time before battery anxiety: 40 minutes.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>( 02 ) Constraints as design</h2>
+    <div class="body">
+      <div class="callout">
+        <div><div class="callout-num">&lt; 8MB</div><div class="callout-label">APK size budget</div></div>
+        <div><div class="callout-num">2G</div><div class="callout-label">Worst-case sync target</div></div>
+        <div><div class="callout-num">100%</div><div class="callout-label">Core loops work offline</div></div>
+      </div>
+      <p>Every design choice was measured in kilobytes. Illustrations were replaced with simple line marks. The typeface was subset to just the characters used across five subjects. Animations were kept to opacity only — no transforms that force repaint on cheap GPUs.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>( 03 ) Flows</h2>
+    <div class="body">
+      <div class="screens">
+        <div class="screen-frame s-half"><div style="font-family:var(--mono);font-size:12px;color:var(--ink-mute);">[ Diagram — daily review loop: pull new cards, review offline, queue sync, SMS tutor fallback ]</div><span class="caption">System flow</span></div>
+        <div class="screen-frame s-half tall"><div class="phone" style="width:220px;height:auto;"><div class="status"><span>9:41</span><span>OFFLINE</span></div><div class="pill">Week 14</div><div class="h">You're <em>ahead</em> of schedule.</div><div class="card" style="font-size:11px;">Streaks are off by default — your teacher sees progress, not pressure.</div><div class="card" style="font-size:11px;"><strong style="color:var(--ink);">Biology</strong> · 82% retention</div><div class="card" style="font-size:11px;"><strong style="color:var(--ink);">Chemistry</strong> · 64% retention</div><div class="btn-mini">Continue review</div></div><span class="caption">Progress screen</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>( 04 ) Outcome</h2>
+    <div class="body">
+      <div class="callout">
+        <div><div class="callout-num">7.2MB</div><div class="callout-label">Final APK size</div></div>
+        <div><div class="callout-num">+38%</div><div class="callout-label">Avg. improvement in pilot test scores</div></div>
+        <div><div class="callout-num">2,400</div><div class="callout-label">Students in first cohort</div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<blockquote class="case-quote"><p>“The first app that <em>respects</em> my battery.”</p><footer>— Secondary-school student, S4</footer></blockquote>
+
+<section class="case-next">
+  <p class="label">( Next case · 04 / 06 )</p>
+  <a href="canopy.html" class="next-link">Canopy <em>— non-profit</em> →</a>
+  <p class="next-desc">Transparent giving for Rwanda Cancer Relief <span class="dot"></span> 2025 · Client</p>
+</section>
+
+<footer class="site-foot"><span>© 2026 Tapiwanashe Marufu</span><a href="../index.html">Back to index →</a></footer>
+<script src="_shared.js"></script>
+</body>
+</html>
